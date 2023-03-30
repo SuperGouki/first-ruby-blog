@@ -10,24 +10,40 @@ main h1 {
   font-size: 36px;
   margin-bottom: 200px;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
-.logo h1 {
-  color: white;
+.logo h1 span {
+  color: #fff; /* Use a color that matches your design */
+  font-size: 1.5em; /* Adjust the size to your liking */
+  font-weight: bold; /* Make the span text bold */
 }
+
 
 main a {
-  background-color: #fff;
-  color: #333;
+  background-color: #3B8FEB;
+  color: #fff;
   display: inline-block;
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 24px;
   text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  
+}
+
+main a:hover {
+  background-color: #2456AE;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  
 }
 
 header {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  
 }
 
 nav {
