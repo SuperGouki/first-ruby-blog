@@ -3,17 +3,59 @@
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="...">
   <div class="logo">
 </header>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".scroll-to-section").on("click", function (event) {
+      event.preventDefault();
 
-
-
+      const target = $(this).attr("href");
+      $("html, body").animate(
+        {
+          scrollTop: $(target).offset().top
+        },
+        1000
+      );
+    });
+  });
+</script>
 <main>
   <h1>James Jiang</h1>
-  <h2>Sr Network Eng/ SRE / Technologist</h2>
-  <%= link_to "See my Skills!", skills_path, class: "view-work-btn" %>  <a href="#" class="view-work-btn">About me</a>
+  <h2>Sr NetSec Eng / SRE / World Traveller</h2>
+  <a href="#image-grid-section" class="view-work-btn scroll-to-section">See my Skills!</a>  <a href="#about-me-section" class="view-work-btn scroll-to-section">About Me</a>
 </main>
 
-
-
+<div class="image-grid" id="image-grid-section">
+  <div class="image-item">
+    <img src="https://hiringsolved.com/wp-content/uploads/2017/04/networkengineer.jpg">
+    <div class="image-description">
+      <h3>Network Engineering</h3>
+      <p>I've designed and deployed large scale networks for some of the top tech companies</p>
+    </div>
+  </div>
+  <div class="image-item">
+    <img src="https://www.incredibuild.com/wp-content/uploads/2021/05/Docker-vs-Kubernetes_980x533_5.jpg">
+    <div class="image-description">
+      <h3>Site Reliability Engineering</h3>
+      <p> I love the challenge of designing, building, and maintaining highly scalable and fault-tolerant systems that can handle massive amounts of traffic and data.</p>
+    </div>
+  </div>
+  <div class="image-item">
+    <img src="https://cdn.ttgtmedia.com/visuals/ComputerWeekly/Hero%20Images/network-security-padlock-businessman-adobe.jpeg">
+    <div class="image-description">
+      <h3>NetSec Engineering</h3>
+      <p>I've done network security consulting for some of the world's largest banks and ISPs.</p>
+    </div>
+  </div>
+</div>
+<div class="about-me-section" id="about-me-section">
+  <div class="about-me-content">
+    <h2>About Me</h2>
+    <p>
+      I love learning and trying new things. In my spare time, I do everything from cooking, kickboxing, video editing and travelling alot!
+    </p>
+  </div>
+</div>
 <footer>
    <ul>
     <li><a href="https://github.com/SuperGouki"><i class="fab fa-github"></i></a></li>
