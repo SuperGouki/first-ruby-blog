@@ -13,4 +13,4 @@ WORKDIR /opt/app
 # Run a shell
 CMD ["/bin/sh"]
 
-EXPOSE 80
+EXPOSE 3001
