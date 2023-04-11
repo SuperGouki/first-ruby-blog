@@ -15,4 +15,4 @@ CMD ["/bin/sh"]
 
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "4001"]
 
-
+EXPOSE 4001
