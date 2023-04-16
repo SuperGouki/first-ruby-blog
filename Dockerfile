@@ -1,18 +1,13 @@
-# Dockerfile.rails
-FROM ruby:3.1.2 AS rails-toolbox
+FROM ruby:2.7
 
-# Default directory
-ENV INSTALL_PATH /opt/app
-RUN mkdir -p $INSTALL_PATH
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
-# Install rails
-RUN gem install rails bundler
-#RUN chown -R user:user /opt/app
-WORKDIR /opt/app
+WORKDIR /app
 
-# Run a shell
-CMD ["/bin/sh"]
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
 
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "4001"]
+COPY . .
 
 EXPOSE 4001
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "4001"]
